@@ -34,7 +34,6 @@ class WeatherApp extends Component {
     });
 
     let weather_url = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&units=Metric&appid=${this.api_key}`
-    // let weather_url = `https://openweathermap.org/data/2.5/find?callback=jQuery34005805460474106237_1726039370356&q=${this.state.city}&type=like&sort=population&cnt=30&appid=439d4b804bc8187953eb36d2a8c26a02&_=1726039370359`
         let response = await fetch(weather_url);
     if (!response.ok) {
       if (response.status === 404) {
@@ -116,7 +115,7 @@ class WeatherApp extends Component {
                 {this.state.temperature ? this.state.temperature : "24"}
                 °c</div>
               <div className="weather-location">
-                {this.state.name ? this.state.name.toUpperCase() : "COIMBATORE"}
+                {this.state.name ? this.state.name.toUpperCase() : "Surat"}
               </div>
               <div className="data-container">
                 {/* Element 1 */}
